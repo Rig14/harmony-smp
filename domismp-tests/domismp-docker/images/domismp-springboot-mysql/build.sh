@@ -23,20 +23,20 @@ copyExternalImageResources() {
      # copy artefact to docker build folder
      cp -r ../shared-artefacts ./artefacts/
 
-    if [[ ! -f "${SMP_SPRINGBOOT_ARTEFACTS}/smp-springboot-$SMP_VERSION-exec.jar" ]]; then
-      echo "SMP artefact '${SMP_SPRINGBOOT_ARTEFACTS}/smp-springboot-$SMP_VERSION-exec.jar' not found!"
+    if [[ ! -f "${SMP_SPRINGBOOT_ARTEFACTS}/harmonysmp-springboot-$SMP_VERSION-exec.jar" ]]; then
+      echo "SMP artefact '${SMP_SPRINGBOOT_ARTEFACTS}/harmonysmp-springboot-$SMP_VERSION-exec.jar' not found!"
       exit 1
     else
       # for mysql tomcat
-      cp "${SMP_SPRINGBOOT_ARTEFACTS}/smp-springboot-$SMP_VERSION-exec.jar" ./artefacts/smp-springboot-exec.jar
+      cp "${SMP_SPRINGBOOT_ARTEFACTS}/harmonysmp-springboot-$SMP_VERSION-exec.jar" ./artefacts/smp-springboot-exec.jar
     fi
 
-    if [[ ! -f "${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip" ]]; then
-      echo "SMP bundle artefact  '${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip' not found!"
+    if [[ ! -f "${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip" ]]; then
+      echo "SMP bundle artefact  '${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip' not found!"
       exit 1
     else
       # for mysql data
-      cp "${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip" ./artefacts/smp-setup.zip
+      cp "${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip" ./artefacts/smp-setup.zip
     fi
 }
 

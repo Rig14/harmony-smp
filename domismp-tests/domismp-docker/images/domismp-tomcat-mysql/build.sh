@@ -31,21 +31,21 @@ copyExternalImageResources() {
       cp "${SMP_PLUGIN_EXAMPLE}/smp-spi-payload-validation-example-$SMP_VERSION.jar" ./artefacts/smp-spi-payload-validation-example.jar
     fi
 
-    if [[ ! -f "${SMP_ARTEFACTS}/smp.war" ]]; then
-      echo "SMP artefact '${SMP_ARTEFACTS}/smp.war' not found. Was project built?"
+    if [[ ! -f "${SMP_ARTEFACTS}/harmonysmp.war" ]]; then
+      echo "SMP artefact '${SMP_ARTEFACTS}/harmonysmp.war' not found. Was project built?"
       exit 1
     else
       # for mysql tomcat
-      cp "${SMP_ARTEFACTS}/smp.war" ./artefacts/smp.war
+      cp "${SMP_ARTEFACTS}/harmonysmp.war" ./artefacts/smp.war
     fi
 
 
-    if [[ ! -f "${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip" ]]; then
-      echo "SMP bundle artefact  '${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip' not found!"
+    if [[ ! -f "${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip" ]]; then
+      echo "SMP bundle artefact  '${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip' not found!"
       exit 1
     else
       # for mysql data
-      cp "${SMP_ARTEFACTS}/smp-${SMP_VERSION}-setup.zip" ./artefacts/smp-setup.zip
+      cp "${SMP_ARTEFACTS}/harmonysmp-${SMP_VERSION}-setup.zip" ./artefacts/smp-setup.zip
     fi
 }
 

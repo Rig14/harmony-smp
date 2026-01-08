@@ -70,7 +70,7 @@ ADD ./artefacts /tmp/artefacts
 COPY ./entrypoint.sh /sbin/entrypoint.sh
 
 RUN unzip /tmp/artefacts/smp-setup.zip -d /tmp/    \
-    && mv /tmp/smp-$SMP_VERSION /tmp/smp-setup \
+    && mv /tmp/harmonysmp-$SMP_VERSION /tmp/smp-setup \
     && mv /tmp/artefacts/smp-springboot-exec.jar $SMP_HOME/     \
     && chmod u+x /sbin/entrypoint.sh
 

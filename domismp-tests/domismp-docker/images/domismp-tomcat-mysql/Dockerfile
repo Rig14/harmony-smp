@@ -148,7 +148,7 @@ COPY bind/named.conf.local /opt/smlconf/bind/named.conf.local
 
 
 RUN unzip /tmp/artefacts/smp-setup.zip -d /tmp/    \
-    && mv /tmp/smp-$SMP_VERSION /tmp/smp-setup \
+    && mv /tmp/harmonysmp-$SMP_VERSION /tmp/smp-setup \
     && mv /tmp/artefacts/smp.war $SMP_HOME/apache-tomcat-$TOMCAT_VERSION/webapps/     \
     && unzip /tmp/sml-setup.zip -d /tmp/    \
     && mv /tmp/bdmsl-webapp-$SML_VERSION /tmp/sml-setup \

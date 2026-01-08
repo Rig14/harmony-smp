@@ -114,8 +114,6 @@ validateAndPrepareArtefacts() {
 buildImages() {
   #buildOracleDatabaseImage
   buildUtils
-  buildImage "${IMAGE_SMP_WEBLOGIC122}"
-  buildImage "${IMAGE_SMP_WEBLOGIC141}"
   buildImage "${IMAGE_SMP_TOMCAT_MYSQL}"
   buildImage "${IMAGE_SMP_SPRINGBOOT_MYSQL}"
   buildImage "${IMAGE_SMP_TESTS}"
@@ -186,11 +184,6 @@ function pushImageIfExisting() {
 # clean
 # -----------------------------------------------------------------------------
 cleanArtefacts() {
-  rm "./oracle/oracle-db-${ORA_VERSION}/${ORACLE_DB_FILE}"   # clean
-  rm "./oracle/OracleJava/java-8/${SERVER_JDK_FILE}"         # clean
-  rm "./oracle/weblogic-12.2.1.4/${WEBLOGIC_122_QUICK_FILE}" # clean
-  rm "./oracle/weblogic-14.1.1.0/${WEBLOGIC_14_FILE}" # clean
-
   rm -rf "./${IMAGE_SMP_WEBLOGIC122}/artefacts/*.*"
 
   if [[ "V$SMP_ARTEFACTS_CLEAR" == "Vtrue" ]]; then

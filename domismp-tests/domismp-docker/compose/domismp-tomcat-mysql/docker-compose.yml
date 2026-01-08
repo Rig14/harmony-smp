@@ -1,6 +1,6 @@
 services:
   domismp-service:
-    image: ${IMAGE_TAG:-edeliverytest}/${IMAGE_SMP_TOMCAT_MYSQL}:${SMP_VERSION}
+    image: edeliverytest/domismp-tomcat-mysql:2.2.1
     hostname: eulogin.protected.smp.local
     environment:
 # example to start it with JDK 8 and JPDA enabled for debugging!
